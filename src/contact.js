@@ -1,0 +1,41 @@
+import _ from 'lodash';
+import './style.css';
+
+import map from './img/map2.png';
+
+export function contactMapAdd () {
+
+    const mainBlock = document.createElement('div');
+    mainBlock.classList.add('main');
+
+    // Contact info
+    const contactSection = document.createElement('div');
+    contactSection.classList.add('contact');
+
+    const h1ContactSection = document.createElement('h2');
+    h1ContactSection.textContent = "Where can you find us?";
+    contactSection.appendChild(h1ContactSection);
+
+    const infoContactSection = document.createElement('div');
+    infoContactSection.classList.add('contact-table');
+
+    const textInfoContactSection = document.createElement('div');
+    textInfoContactSection.classList.add('contact-text');
+    textInfoContactSection.innerHTML = '<p>Happy street 1</p> <p>Happy town, Happiness 111111</p> <p>MON-FRI 10:00 - 21:00</p>'
+    infoContactSection.appendChild(textInfoContactSection);
+
+    const mapInfoContactSection = new Image();
+    mapInfoContactSection.src = map;
+    infoContactSection.appendChild(mapInfoContactSection);
+
+    contactSection.appendChild(infoContactSection);
+
+    // Footer
+    const footer = document.createElement('div');
+    footer.classList.add('footer');
+    footer.innerHTML = '<p>by vasenkom</p>'
+
+    mainBlock.appendChild(contactSection);
+
+    return {mainBlock, footer}    
+}
