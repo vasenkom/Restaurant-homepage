@@ -9,7 +9,7 @@ import side2 from './img/side2.jpg';
 import map from './img/map2.png';
 const contentBox = document.querySelector('#content');
 
-function componentAdd () {
+export function componentAdd () {
     // Main block with hero-section, menu and contact included
     const mainBlock = document.createElement('div');
     mainBlock.classList.add('main');
