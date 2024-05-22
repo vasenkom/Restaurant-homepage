@@ -194,6 +194,6 @@ export function componentAdd () {
 
     return {mainBlock, footer}    
 }
-const { mainBlock, footer } = componentAdd();
-contentBox.appendChild(mainBlock);
-contentBox.appendChild(footer);
+// const { mainBlock, footer } = componentAdd();
+// contentBox.appendChild(mainBlock);
+// contentBox.appendChild(footer);
