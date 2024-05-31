@@ -6,12 +6,11 @@ import poke3 from './img/poke3.jpg';
 import poke4 from './img/poke4.jpg';
 import side1 from './img/side1.jpg';
 import side2 from './img/side2.jpg';
-const contentBox = document.querySelector('#content');
 
 export function menuAdd () {
     // Main block with hero-section, menu and contact included
-    const mainBlock = document.createElement('div');
-    mainBlock.classList.add('main');
+    const menuMainBlock = document.createElement('div');
+    menuMainBlock.classList.add('main');
 
     // Menu section
     const menuSection = document.createElement('div');
@@ -135,19 +134,11 @@ export function menuAdd () {
     
     foodSideDishMenu.appendChild(sideCard2);
 
-    // Footer
-    const footer = document.createElement('div');
-    footer.classList.add('footer');
-    footer.innerHTML = '<p>by vasenkom</p>'
-
     mainDishMenu.appendChild(foodMenu);
     sideDishMenu.appendChild(foodSideDishMenu);
     menuSection.appendChild(mainDishMenu);
     menuSection.appendChild(sideDishMenu);
-    mainBlock.appendChild(menuSection);
+    menuMainBlock.appendChild(menuSection);
 
-    return {mainBlock, footer}    
+    return {menuMainBlock}    
 }
-const { mainBlock, footer } = componentAdd();
-contentBox.appendChild(mainBlock);
-contentBox.appendChild(footer);
