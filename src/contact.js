@@ -5,8 +5,8 @@ import map from './img/map2.png';
 
 export function contactMapAdd () {
 
-    const mainBlock = document.createElement('div');
-    mainBlock.classList.add('main');
+    const contactMainBlock = document.createElement('div');
+    contactMainBlock.classList.add('main');
 
     // Contact info
     const contactSection = document.createElement('div');
@@ -30,12 +30,7 @@ export function contactMapAdd () {
 
     contactSection.appendChild(infoContactSection);
 
-    // Footer
-    const footer = document.createElement('div');
-    footer.classList.add('footer');
-    footer.innerHTML = '<p>by vasenkom</p>'
+    contactMainBlock.appendChild(contactSection);
 
-    mainBlock.appendChild(contactSection);
-
-    return {mainBlock, footer}    
+    return {contactMainBlock}    
 }
